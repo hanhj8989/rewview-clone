@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="NotoSans_48_FFAE00_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_48</item>
+        <item name="android:textColor">@color/color_FFAE00</item>
+    </style>
+
+</resources>

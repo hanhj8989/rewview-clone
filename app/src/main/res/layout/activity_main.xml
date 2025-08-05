@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimary"
+        app:title="@string/campaign_kr">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/campaign_kr"
+                style="@style/NotoSans_48_FFAE00_Bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/notification_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="26dp"
+                android:layout_marginBottom="6dp"
+                android:contentDescription="@string/notifications"
+                android:padding="5dp"
+                android:src="@drawable/ic_noti_bell"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:id="@+id/settings_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="26dp"
+                android:layout_marginBottom="6dp"
+                android:contentDescription="@string/notifications"
+                android:padding="5dp"
+                android:src="@drawable/ic_settings"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/notification_badge"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_gravity="end|top"
+                android:layout_marginStart="-7dp"
+                android:layout_marginBottom="-10dp"
+                android:src="@drawable/shape_basic_circle"
+                android:textColor="@android:color/white"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/notification_icon"
+                app:layout_constraintStart_toEndOf="@+id/notification_icon"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <fragment
+        android:id="@+id/nav_host_fragment_activity_main"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/mobile_navigation" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/shape_bottom_nav_background"
+        style="@style/RewviewBottomNavigationViewTheme"
+        app:labelVisibilityMode="labeled"
+        app:elevation="0dp"
+        android:stateListAnimator="@null"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:itemPaddingTop="8dp"
+        app:itemPaddingBottom="12dp"
+        app:itemTextAppearanceActive="@style/CustomBottomNavActiveTextAppearance"
+        app:itemTextAppearanceInactive="@style/CustomBottomNavInactiveTextAppearance"
+        app:menu="@menu/bottom_nav_menu" />
+
+</LinearLayout>
