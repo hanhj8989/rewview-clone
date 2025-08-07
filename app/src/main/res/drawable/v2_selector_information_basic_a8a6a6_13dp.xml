@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/information_gray_13dp" android:state_enabled="false" />
+    <item android:drawable="@drawable/v2_ic_vt_information_13dp" android:state_enabled="true" />
+</selector>

@@ -1,5 +1,161 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <!-- 머티리얼 디자인의 Chip 을 사용하기 위해서 해당 Activity 에서 사용 // 2022/05/12 seongtaek  -->
+    <style name="AppTheme.MaterialComponents" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:textColorPrimary">@color/colorPrimaryDark</item>
+    </style>
+
+    <!-- MaterialComponents 스타일에서 AlertDialog 의 스타일 테마 설정 // 2022/05/12 seongtaek -->
+    <style name="MaterialComponents.AlertDialogTheme" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="buttonBarPositiveButtonStyle">@style/Alert.Button.Positive</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Alert.Button.Neutral</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Alert.Button.Neutral</item>
+    </style>
+
+    <style name="Alert.Button.Positive" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Alert.Button.Neutral" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="AppTheme.TransActionBar">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <!-- 24년 서비스 개편에서 적용하는 테마. -->
+    <style name="RewviewBaseTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:windowLightStatusBar">true</item>           <!-- 상태 표시줄의 아이콘과 텍스트가 어두운 색으로 변경 -->
+        <item name="android:textColorPrimary">@color/color_000000</item>
+        <item name="colorAccent">@color/basicColor</item>
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="buttonStyle">@null</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="RewviewStatusBarBasicColorTheme" parent="RewviewBaseTheme">
+        <item name="colorPrimaryDark">@color/basicColor</item>
+    </style>
+
+    <style name="BasicButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/basicColor</item>
+    </style>
+
+    <!-- 24년 서비스 개편에서 적용하는 테마. -->
+    <style name="RewviewBottomNavigationViewTheme" parent="RewviewBaseTheme">
+        <item name="itemIconTint">@color/bottom_nav_color_selector</item>    <!-- 아이템 선택 or 비선택인 경우. 2024. 6. 28. seongtaek  -->
+        <item name="itemTextColor">@color/bottom_nav_color_selector</item>    <!-- 아이템 선택 or 비선택인 경우. 2024. 6. 28. seongtaek  -->
+        <item name="backgroundColor">@color/color_FFFFFF</item>
+    </style>
+
+    <!-- 24년 서비스 개편에서 적용하는 테마. -->
+    <style name="RewviewWebViewTheme" parent="RewviewBaseTheme">
+        <item name="colorPrimary">@color/black</item>       <!--// 달력에서 버튼의 색상 변경을 위해 선언  2024-08-26 seongtaek -->
+    </style>
+
+    <!-- 24년 서비스 개편에서 적용하는 테마. -->
+    <!-- BottomNavigationView 활성화된 상태의 텍스트 스타일 -->
+    <style name="CustomBottomNavActiveTextAppearance" parent="DefaultTextView">
+        <item name="fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">9dp</item>
+        <item name="android:textColor">@color/color_000000</item>
+    </style>
+
+    <!-- 24년 서비스 개편에서 적용하는 테마. -->
+    <!-- BottomNavigationView 비활성화된 상태의 텍스트 스타일 -->
+    <style name="CustomBottomNavInactiveTextAppearance" parent="DefaultTextView">
+        <item name="fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">9dp</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+    </style>
+
+    <!-- 24년 서비스 개편에서 적용하는 테마. -->
+    <style name="CustomToolbarTitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">24dp</item>
+    </style>
+
+    <!-- 24년 서비스 개편에서 적용하는 테마. -->
+    <!-- BottomSheetDialog 테마 -->
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetModalStyle</item>
+    </style>
+
+    <style name="BottomSheetModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/shape_grdtn_fill_round_80</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:layout_marginTop">-17dp</item>
+    </style>
+
+    <!-- 서비스 개펀 전 기존에 사용했던 테마. -->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorAccent">@color/basicColor</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="AppTheme.Transparent" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="PickerStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@android:color/black</item>
+    </style>
+
+    <style name="DefaultLayout">
+        <item name="android:clickable">true</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
 
     <style name="DefaultTextView">
         <item name="android:fontFamily">@font/noto_sans_regular</item>
@@ -7,10 +163,2482 @@
         <item name="android:includeFontPadding">false</item>
     </style>
 
+    <style name="Text_10_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_10</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_11_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_11</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_12_MEDIUM" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_24</item>
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+    </style>
+
+    <style name="Text_12_999999" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_12</item>
+        <item name="android:textColor">#999999</item>
+    </style>
+
+    <style name="Text_13_Basic" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_13</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Text_13_000000" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_13</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="Text_14_999999" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_14</item>
+        <item name="android:textColor">#999999</item>
+    </style>
+
+    <style name="Text_15_999999" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_15</item>
+        <item name="android:textColor">#999999</item>
+    </style>
+
+    <style name="Text_17_FFFFFF" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_17</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="Text_15_FFFFFF" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_15</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="Text_17_000000" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_17</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="Text_17_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_17</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="Text_15_4D4D4D" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_15</item>
+        <item name="android:textColor">#4D4D4D</item>
+    </style>
+
+    <style name="Text_16_6B6B6B" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_16</item>
+        <item name="android:textColor">#6B6B6B</item>
+    </style>
+
+    <style name="Text_16_707070" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_16</item>
+        <item name="android:textColor">#707070</item>
+    </style>
+
+    <style name="Text_16_000000" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_16</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="Text_16_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_16</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_16_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_16</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_18_FFFFFF" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text_18_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_19_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_19</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_18_4D4D4D" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">#4D4D4D</item>
+    </style>
+
+    <style name="Text_18_7D7D7D" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">#7D7D7D</item>
+    </style>
+
+    <style name="Text_18_898989" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">#898989</item>
+    </style>
+
+    <style name="Text_18_999999" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">#999</item>
+    </style>
+
+    <style name="Text_18_A8A6A6" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+    </style>
+
+    <style name="Text_18_A8A6A6_Medium" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+    </style>
+
+    <style name="Text_18_000000" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text_18_Basic_Medium" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Text_18_707070" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">@color/color_707070</item>
+    </style>
+
+    <style name="Text_18_707070_Medium" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">@color/color_707070</item>
+    </style>
+
+    <style name="Text_19_707070_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">@color/color_707070</item>
+    </style>
+
+    <style name="Text_19_707070" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">@color/color_707070</item>
+    </style>
+
+    <style name="Text_18_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_18_Basic" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Text_16_A8A6A6" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_16</item>
+        <item name="android:textColor">#A8A6A6</item>
+    </style>
+
+    <style name="Text_20_7F7F7F" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">#7F7F7F</item>
+    </style>
+
+    <style name="Text_39_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_39</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="Text_18_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">@color/basicColor</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_19_000000" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_19</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text_19_80000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:textColor">@color/color_80000000</item>
+    </style>
+
+    <style name="Text_19_787878" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_19</item>
+        <item name="android:textColor">#787878</item>
+    </style>
+
+    <style name="Text_20_D3D2D2" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">#D3D2D2</item>
+    </style>
+
+    <style name="Text_20_DCDCDC" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">#DCDCDC</item>
+    </style>
+
+    <style name="Text_19_565656" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_19</item>
+        <item name="android:textColor">#565656</item>
+    </style>
+
+    <style name="Text_19_BBBBBB" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_19</item>
+        <item name="android:textColor">#BBBBBB</item>
+    </style>
+
+    <style name="Text_20" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_20</item>
+    </style>
+
+    <style name="Text_20_FFFFFF" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text_20_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_20_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text_20_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_20_80000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@color/color_80000000</item>
+    </style>
+
+    <style name="Text_20_Basic" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Text_20_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@color/basicColor</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_20_A8A6A6" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+    </style>
+
+    <style name="Text_20_A8A6A6_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+    </style>
+
+    <style name="Text_20_4D4D4D" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">#4D4D4D</item>
+    </style>
+
+    <style name="Text_20_4D4D4D_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">#4D4D4D</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_20_797979" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">#797979</item>
+    </style>
+
+    <style name="Text_20_747474" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@color/color_747474</item>
+    </style>
+
+    <style name="Text_20_707070" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@color/color_707070</item>
+    </style>
+
+    <style name="Text_20_898989" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">#898989</item>
+    </style>
+
+    <style name="Text_20_7B7B7B" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">#7B7B7B</item>
+    </style>
+
+    <style name="Text_20_999999" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">#999999</item>
+    </style>
+
+    <style name="Text_20_999999_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">#999999</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_20_C4C4C4" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@color/color_C4C4C4</item>
+    </style>
+
+    <style name="Text_20_C9C7C7" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@color/color_C9C7C7</item>
+    </style>
+
+    <style name="Text_21_000000" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_21</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text_21_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_21</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_21_898989" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_21</item>
+        <item name="android:textColor">#898989</item>
+    </style>
+
+    <style name="Text_21_FFFFFF" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_21</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text_21_000000_Regular" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_21</item>
+        <item name="android:textColor">@color/color_000000</item>
+    </style>
+
+    <style name="Text_21_A8A6A6_Regular" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_21</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+    </style>
+
+    <style name="Text_21_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_21</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_21_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_21</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Text_22_4D4D4D" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:textColor">#4D4D4D</item>
+    </style>
+
+    <style name="Text_22_868686" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:textColor">#868686</item>
+    </style>
+
+    <style name="Text_22_868686_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:textColor">#868686</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_22_999999_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:textColor">#999999</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_22_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text_22_000000_Medium" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text_22_80000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:textColor">@color/color_80000000</item>
+    </style>
+
+    <style name="Text_22_Bold" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_22_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_22_Basic" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Text_22_000000_Regular" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:textColor">@color/color_000000</item>
+    </style>
+
+    <style name="Text_22_FFFFFF" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text_22_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text_22_A8A6A6_Medium" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+    </style>
+
+    <style name="Text_22_A8A6A6" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+    </style>
+
+    <style name="Text_22_A8A6A6_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+    </style>
+
+    <style name="Text_22_basic_Medium" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Text_23_A8A6A6" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+    </style>
+
+    <style name="Text_23_A8A6A6_Regular" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+    </style>
+
+    <style name="Text_23_A8A6A6_Medium" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+    </style>
+
+
+    <style name="Text_23_A8A6A6_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_23_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="NotoSans_15_707070" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_15</item>
+        <item name="android:textColor">#707070</item>
+    </style>
+
+    <style name="NotoSans_16_707070" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_16</item>
+        <item name="android:textColor">@color/color_707070</item>
+    </style>
+
+    <style name="NotoSans_16_FFFFFF" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_16</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="NotoSans_17_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_17</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="NotoSans_17_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_17</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="NotoSans_18_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="NotoSans_18_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="NotoSans_18_707070" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">@color/color_707070</item>
+    </style>
+
+    <style name="NotoSans_19_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_19</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="NotoSans_19_A8A6A6" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_19</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+    </style>
+
+    <style name="NotoSans_19_707070" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_19</item>
+        <item name="android:textColor">@color/color_707070</item>
+    </style>
+
+    <style name="NotoSans_19_707070_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_19</item>
+        <item name="android:textColor">@color/color_707070</item>
+    </style>
+
+    <style name="NotoSans_20_707070" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">#707070</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="NotoSans_20_A8A6A6" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">#A8A6A6</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="NotoSans_20_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="NotoSans_20_818181" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">#818181</item>
+    </style>
+
+    <style name="NotoSans_20_FFFFFF_bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="NotoSans_20_80000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@color/color_80000000</item>
+    </style>
+
+    <style name="NotoSans_20_Basic" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@color/basicColor</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="NotoSans_22_FFFFFF" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="NotoSans_24_000000_Light" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_light</item>
+        <item name="android:textSize">@dimen/px_24</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="NotoSans_24_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_24</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="NotoSans_24_A8A6A6" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_24</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+    </style>
+
+    <style name="NotoSans_24_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_24</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="NotoSans_23_FFFFFF" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">@color/color_FFFFFF</item>
+    </style>
+
+    <style name="NotoSans_23_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="NotoSans_23_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="NotoSans_23_707070" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">@color/color_707070</item>
+    </style>
+
+    <style name="NotoSans_25_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="NotoSans_25_80000000_Medium" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">@color/color_80000000</item>
+    </style>
+
+    <style name="NotoSans_25_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="NotoSans_25_a8a6a6" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+    </style>
+
+    <style name="NotoSans_26_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_26</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="NotoSans_29_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_29</item>
+        <item name="android:textColor">@color/color_FFFFFF</item>
+    </style>
+
+    <style name="NotoSans_30_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_30</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="NotoSans_32_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_32</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="NotoSans_35_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_35</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="NotoSans_35_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_35</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="NotoSans_Regular_34_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_34</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="NotoSans_40_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_40</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
     <style name="NotoSans_48_FFAE00_Bold" parent="DefaultTextView">
         <item name="android:fontFamily">@font/noto_sans_bold</item>
         <item name="android:textSize">@dimen/px_48</item>
         <item name="android:textColor">@color/color_FFAE00</item>
+    </style>
+
+    <style name="NotoSans_70_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_70</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text_23_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_23_4D4D4D" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">#4D4D4D</item>
+    </style>
+
+    <style name="Text_23_416B9B" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">#416B9B</item>
+    </style>
+
+    <style name="Text_23_Basic" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Text_23_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Text_23_787878" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">#787878</item>
+    </style>
+
+    <style name="Text_25_B1B1B1" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">#b1b1b1</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Text_23_707070" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">#707070</item>
+    </style>
+
+    <style name="Text_23_898989" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">#898989</item>
+    </style>
+
+    <style name="Text_23_999999" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">#999999</item>
+    </style>
+
+    <style name="Text_23_B8B8B8" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">#b8b8b8</item>
+    </style>
+
+    <style name="Text_23_FFFFFF" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text_24_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_24</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text_24_F0A819" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_24</item>
+        <item name="android:textColor">@color/color_F0A819</item>
+    </style>
+
+    <style name="Text_24_818181" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_24</item>
+        <item name="android:textColor">@color/color_818181</item>
+    </style>
+
+    <style name="Text_24_818181_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_24</item>
+        <item name="android:textColor">@color/color_818181</item>
+    </style>
+
+    <style name="Text_24_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_24</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text_24_A8A6A6_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_24</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+    </style>
+
+    <style name="Text_24_787878" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_24</item>
+        <item name="android:textColor">#787878</item>
+    </style>
+
+    <style name="Text_24_999999" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_24</item>
+        <item name="android:textColor">#999999</item>
+    </style>
+
+    <style name="Text_24_FFFFFF" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_24</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text_24_707070" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_24</item>
+        <item name="android:textColor">@color/color_707070</item>
+    </style>
+
+    <style name="Text_24_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_24</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text_24_FFFFFF_Medium" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_24</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text_24_000000_Medium" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_24</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text_24_Basic" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_24</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Text_24_Basic_Medium" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_24</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Text_24_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_24</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Text_23_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_25_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColorHint">#888888</item>
+    </style>
+
+    <style name="Text_25_A8A6A6" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">#A8A6A6</item>
+    </style>
+
+    <style name="Text_25_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_25_787878" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">#787878</item>
+    </style>
+
+    <style name="Text_25_868686" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">#868686</item>
+    </style>
+
+    <style name="Text_25_EE7800" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">#EE7800</item>
+        <item name="android:textColorHint">#888888</item>
+    </style>
+
+    <style name="Text_25_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">@color/basicColor</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_25_Basic" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Text_25_4D4D4D" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">#4D4D4D</item>
+    </style>
+
+    <style name="Text_25_F14449" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">#F14449</item>
+    </style>
+
+    <style name="Text_25_7F7F7F" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">#7F7F7F</item>
+    </style>
+
+    <style name="Text_25_999999" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">#999999</item>
+    </style>
+
+    <style name="Text_25_FFFFFF" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text_25_FFFFFF_Medium" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text_25_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_25_707070_Medium" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">@color/color_707070</item>
+    </style>
+
+    <style name="Text_26_FFFFFF" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_26</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text_26_FFFFFF_Medium" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_26</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text_26_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_26</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text_26_000000_Medium" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_26</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text_26_000000" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_26</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text_26_A8A6A6" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_26</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+    </style>
+
+    <style name="Text_26_A8A6A6_Medium" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_26</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+    </style>
+
+    <style name="Text_26_A8A6A6_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_26</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+    </style>
+
+    <style name="Text_26_E1730F" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_26</item>
+        <item name="android:textColor">#E1730F</item>
+    </style>
+
+    <style name="Text_26_999999" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_26</item>
+        <item name="android:textColor">#999999</item>
+    </style>
+
+    <style name="Text_26_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_26</item>
+        <item name="android:textColor">@color/basicColor</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_26_Basic" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_26</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Text_23_B0B0B0" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">#B0B0B0</item>
+    </style>
+
+    <style name="Text_27_000000" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_27</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColorHint">#888888</item>
+    </style>
+
+    <style name="Text_27_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_27</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_27_999999" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_27</item>
+        <item name="android:textColor">#999999</item>
+    </style>
+
+    <style name="Text_27_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_27</item>
+        <item name="android:textColor">@color/basicColor</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_27_E1730F" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_27</item>
+        <item name="android:textColor">@color/color_E1730F</item>
+    </style>
+
+    <style name="Text_27_FFFFFF" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_27</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text_28_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_28</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_28_FFFFFF" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_28</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text_28_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_28</item>
+        <item name="android:textColor">@color/basicColor</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_28_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_28</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text_28_A8A6A6" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_28</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+    </style>
+
+    <style name="Text_28_A8A6A6_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_28</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+    </style>
+
+    <style name="Text_28_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_28</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_29_000000" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_29</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text_29_565656" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_29</item>
+        <item name="android:textColor">#565656</item>
+    </style>
+
+    <style name="Text_30_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_30</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_30_000000_Medium" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_30</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text_30_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_30</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_30_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_30</item>
+        <item name="android:textColor">@color/basicColor</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_30_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_30</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text_30_A8A6A6" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_30</item>
+        <item name="android:textColorHint">@color/color_A8A6A6</item>
+    </style>
+
+    <style name="Text_30_Basic" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_30</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Text_30_FF0000" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_30</item>
+        <item name="android:textColor">@android:color/holo_red_light</item>
+    </style>
+
+    <style name="Text_30_999999" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_30</item>
+        <item name="android:textColor">#999999</item>
+    </style>
+
+    <style name="Text_30_FFFFFF" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_30</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text_32_000000" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_32</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text_32_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_32</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_32_A8A6A6" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_32</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+    </style>
+
+    <style name="Text_32_999999" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_32</item>
+        <item name="android:textColor">#999999</item>
+    </style>
+
+    <style name="Text_32_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_32</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_32_FFFFFF" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_32</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text_32_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_32</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Text_33_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_33</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text_33_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_33</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_33_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_33</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_34_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_34</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_34_A8A6A6_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_34</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_34_000000" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_34</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text_34_000000_Bold" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_34</item>
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text_35_000000" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_35</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text_35_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_35</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_21_7F7F7F" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_21</item>
+        <item name="android:textColor">#7F7F7F</item>
+    </style>
+
+    <style name="Text_36_FFFFFF" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_36</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text_35_FFFFFF" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_35</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text_35_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_35</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_35_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_35</item>
+        <item name="android:textColor">@color/basicColor</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_36_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_36</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text_37_FFFFFF_bold" parent="DefaultTextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/px_37</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text_38_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_38</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_12_000000_Light" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_26</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Text_38_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_38</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_38_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_38</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_42_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_42</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_39_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_38</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_38_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_38</item>
+        <item name="android:textColor">@color/basicColor</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_39_000000" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_39</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text_40_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_40</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_40_FFFFFF" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_40</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text_43_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_43</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_44_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_44</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text_25_707070" parent="DefaultTextView">
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">#707070</item>
+    </style>
+
+    <style name="Medium_25_FFFFFF" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Medium_26" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_26</item>
+    </style>
+
+    <style name="Medium_26_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_26</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text_45_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_45</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text_45_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_45</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text_45_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_45</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Text_52_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_52</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_56_E1730F_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_56</item>
+        <item name="android:textColor">#E1730F</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Medium_25_707070" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">#707070</item>
+    </style>
+
+    <style name="Medium_23_Basic" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">@color/basicFontColor</item>
+    </style>
+
+    <style name="Medium_23_FFFFFF" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="Medium_20_FFFFFF" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Medium_20_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Medium_21_FFFFFF" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_21</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Medium_20_Basic" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Medium_22_FFFFFF" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Medium_25_EBA914" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">#EBA914</item>
+    </style>
+
+    <style name="Medium_25_7F7F7F" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">#7F7F7F</item>
+    </style>
+
+    <style name="Medium_25_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Medium_30_FFFFFF" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_30</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Medium_30_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:textSize">@dimen/px_30</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Meltix_13_FFFFFF" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/meltix_regular</item>
+        <item name="android:textSize">@dimen/px_13</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!--S (TODO)-->
+    <style name="Nunito_15_Light_707070" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/nunito_light</item>
+        <item name="android:textSize">@dimen/px_15</item>
+        <item name="android:textColor">#707070</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Nunito_13_Light_707070" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/nunito_light</item>
+        <item name="android:textSize">@dimen/px_13</item>
+        <item name="android:textColor">#707070</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <!--E-->
+
+    <style name="Text_17_707070" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:textSize">@dimen/px_17</item>
+        <item name="android:textColor">#707070</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Meltix_20_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/meltix_regular</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Meltix_20_basic" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/meltix_regular</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Meltix_20_basic_bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/meltix_bold</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Meltix_20_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/meltix_bold</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Meltix_22_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/meltix_regular</item>
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Meltix_22_FFFFFF" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/meltix_regular</item>
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Meltix_25_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/meltix_bold</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">@color/basicColor</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Meltix_25_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/meltix_bold</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Meltix_25_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/meltix_regular</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Meltix_25_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/meltix_bold</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Meltix_25_999999" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/meltix_regular</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">#999999</item>
+    </style>
+
+    <style name="Meltix_26_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/meltix_bold</item>
+        <item name="android:textSize">@dimen/px_26</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Meltix_28_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/meltix_bold</item>
+        <item name="android:textSize">@dimen/px_28</item>
+        <item name="android:textColor">@color/basicColor</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Meltix_30_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/meltix_bold</item>
+        <item name="android:textSize">@dimen/px_30</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Meltix_35_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/meltix_bold</item>
+        <item name="android:textSize">@dimen/px_35</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Roboto_15_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">@dimen/px_15</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Bottom_Campaign">
+        <item name="android:background">@drawable/selector_campaign</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Bottom_Talk_2">
+        <item name="android:background">@drawable/selector_talk_2</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Bottom_Home_2">
+        <item name="android:background">@drawable/selector_home_2</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Bottom_Magazone_2">
+        <item name="android:background">@drawable/selector_magazine_2</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Bottom_Campaign_2">
+        <item name="android:background">@drawable/selector_campaign_2</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Bottom_Review_2">
+        <item name="android:background">@drawable/selector_review_2</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Bottom_Review">
+        <item name="android:background">@drawable/selector_review</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="FilterCheckBox">
+        <item name="android:paddingLeft">@dimen/px_28</item>
+        <item name="android:paddingRight">@dimen/px_28</item>
+        <item name="android:minWidth">@dimen/px_116</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:textColor">@color/color_999999</item>
+        <item name="android:background">@drawable/selector_review_filter_27</item>
+    </style>
+
+    <style name="HashTagCheckBox">
+        <item name="android:background">@drawable/selector_hash_tag_bg</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/px_21</item>
+        <item name="android:textColor">@drawable/selector_hash_tag_color</item>
+    </style>
+
+    <style name="ProfileEditCheckBox">
+        <item name="android:background">@drawable/selector_profile_edit_bg_color</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">@drawable/selector_profile_edit_color_2</item>
+    </style>
+
+    <style name="NotoSansMediumProfileEditCheckBox">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:background">@drawable/selector_profile_edit_bg_color</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">@drawable/selector_profile_edit_color_2</item>
+    </style>
+
+    <style name="FAQCheckBox" parent="@style/Text_25_787878">
+        <item name="android:background">@drawable/selector_faq_bg_color</item>
+        <item name="android:textColor">@drawable/selector_faq_text_color</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="QuizOCheckBox">
+        <item name="android:background">@drawable/selector_quiz_o</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="QuizXCheckBox">
+        <item name="android:background">@drawable/selector_quiz_x</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="BasicRoundCornerCheckBox">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:background">@drawable/selector_basic_stroke_2dp</item>
+        <item name="android:textColor">@drawable/selector_basic_white_text_color</item>
+        <item name="android:textSize">@dimen/px_26</item>
+        <item name="android:button">@null</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="BasicRoundCornerButton">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:background">@drawable/selector_basic_stroke_2dp</item>
+        <item name="android:textColor">@drawable/selector_basic_white_text_color</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">@dimen/px_26</item>
+    </style>
+
+    <style name="CheckBoxTextColorA8A6A6" parent="@style/Text_22_000000">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="AccountRegiCheckBox" parent="@style/Text_22_000000">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:button">@null</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:lineSpacingExtra">9sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ProfileCheckBox" parent="@style/Text_20_000000">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="SubSurveyCheckBox" parent="@style/Text_26_999999">
+        <item name="android:background">@drawable/selector_sub_survey_bg_color</item>
+        <item name="android:textColor">@drawable/selector_sub_survey_text_color</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="NullEditText_19_000000" parent="@android:style/Widget.EditText">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:background">@null</item>
+        <item name="android:textSize">@dimen/px_19</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColorHint">#a8a6a6</item>
+        <item name="android:minHeight">@dimen/px_90</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textCursorDrawable">@android:color/black</item>
+    </style>
+
+    <style name="NullEditText_20_000000" parent="@android:style/Widget.EditText">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:background">@null</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColorHint">#999999</item>
+        <item name="android:minHeight">@dimen/px_90</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textCursorDrawable">@android:color/black</item>
+    </style>
+
+    <style name="NullEditText_25_A8A6A6" parent="@android:style/Widget.EditText">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:background">@null</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">#A8A6A6</item>
+        <item name="android:textColorHint">#A8A6A6</item>
+        <item name="android:minHeight">@dimen/px_90</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textCursorDrawable">@android:color/black</item>
+    </style>
+
+    <style name="NullEditText_22_B5B5B5" parent="@android:style/Widget.EditText">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:background">@null</item>
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:textColor">#B5B5B5</item>
+        <item name="android:textColorHint">#B5B5B5</item>
+        <item name="android:minHeight">@dimen/px_78</item>
+    </style>
+
+    <style name="NullEditNotoSans_Bold_24_000000" parent="@android:style/Widget.EditText">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:background">@null</item>
+        <item name="android:textSize">@dimen/px_24</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textColorHint">#A8A6A6</item>
+        <item name="android:minHeight">@dimen/px_90</item>
+    </style>
+
+    <style name="NullEditText_25_000000" parent="@android:style/Widget.EditText">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:background">@null</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColorHint">#999999</item>
+        <item name="android:minHeight">@dimen/px_90</item>
+    </style>
+
+    <style name="NullEditText_25_787878" parent="@android:style/Widget.EditText">
+        <item name="android:background">@null</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">#787878</item>
+        <item name="android:textColorHint">#999999</item>
+        <item name="android:minHeight">@dimen/px_90</item>
+    </style>
+
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!--Gmarket font Start -->
+
+    <style name="Gmarket_12_00000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_12</item>
+        <item name="android:textColor">@color/color_000000</item>
+    </style>
+
+    <style name="Gmarket_13_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_13</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Gmarket_14_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_14</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Gmarket_15_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_15</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="Gmarket_15_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_15</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Gmarket_15_Basic" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_medium</item>
+        <item name="android:textSize">@dimen/px_15</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Gmarket_15_707070" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_medium</item>
+        <item name="android:textSize">@dimen/px_15</item>
+        <item name="android:textColor">#707070</item>
+    </style>
+
+    <style name="Gmarket_15_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_medium</item>
+        <item name="android:textSize">@dimen/px_15</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="Gmarket_16_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_16</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Gmarket_16_707070" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_medium</item>
+        <item name="android:textSize">@dimen/px_16</item>
+        <item name="android:textColor">#707070</item>
+    </style>
+
+    <style name="Gmarket_17_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_17</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Gmarket_17_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_17</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Gmarket_17_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_medium</item>
+        <item name="android:textSize">@dimen/px_17</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="Gmarket_17_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_17</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="Gmarket_17_707070" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_medium</item>
+        <item name="android:textSize">@dimen/px_17</item>
+        <item name="android:textColor">#707070</item>
+    </style>
+
+    <style name="Gmarket_18_FFFFFF" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_medium</item>
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Gmarket_18_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Gmarket_18_A8A6A6" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_medium</item>
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+    </style>
+
+    <style name="Gmarket_18_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_medium</item>
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Gmarket_18_Basic" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_medium</item>
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Gmarket_18_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_18</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Gmarket_19_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_19</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="Gmarket_20_A8A6A6" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_medium</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">#A8A6A6</item>
+    </style>
+
+    <style name="Gmarket_20_A8A6A6_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">#A8A6A6</item>
+    </style>
+
+    <style name="Gmarket_20_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_medium</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Gmarket_20_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Gmarket_20_707070_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_20</item>
+    </style>
+
+    <style name="Gmarket_20_Basic" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_medium</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Gmarket_20_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Gmarket_20_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Gmarket_20_707070" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_medium</item>
+        <item name="android:textSize">@dimen/px_20</item>
+        <item name="android:textColor">#707070</item>
+    </style>
+
+    <style name="Gmarket_21_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_21</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="Gmarket_21_707070" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_medium</item>
+        <item name="android:textSize">@dimen/px_21</item>
+        <item name="android:textColor">#707070</item>
+    </style>
+
+    <style name="Gmarket_22_707070_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_22</item>
+    </style>
+
+    <style name="Gmarket_22_Basic" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_medium</item>
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Gmarket_22_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_22</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Gmarket_23_FFFFFF" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_medium</item>
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Gmarket_23_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Gmarket_23_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_medium</item>
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Gmarket_23_707070" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_medium</item>
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">@color/color_707070</item>
+    </style>
+
+    <style name="Gmarket_23_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Gmarket_23_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Gmarket_23_000000_Light" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_light</item>
+        <item name="android:textSize">@dimen/px_23</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Gmarket_25_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_medium</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Gmarket_25_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Gmarket_25_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_25</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Gmarket_26_Bold_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_26</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Gmarket_28_000000_Medium" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_medium</item>
+        <item name="android:textSize">@dimen/px_28</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Gmarket_28_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_28</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Gmarket_28_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_28</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Gmarket_29_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_29</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Gmarket_30_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_30</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Gmarket_32_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_32</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Gmarket_33_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_33</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Gmarket_34_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_34</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Gmarket_34_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_34</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Gmarket_35_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_35</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Gmarket_35_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_35</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Gmarket_35_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_35</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Gmarket_36_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_36</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Gmarket_37_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_37</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="Gmarket_37_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_37</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Gmarket_40_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_40</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Gmarket_42_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_42</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Gmarket_43_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_43</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Gmarket_43_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_43</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="Gmarket_43_A8A6A6_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_43</item>
+        <item name="android:textColor">@color/color_A8A6A6</item>
+    </style>
+
+    <style name="Gmarket_44_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_44</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Gmarket_44_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_44</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="Gmarket_45_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_45</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Gmarket_45_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_45</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="Gmarket_47_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_47</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Gmarket_54_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_54</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Gmarket_56_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_56</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Gmarket_58_Basic_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_58</item>
+        <item name="android:textColor">@color/basicColor</item>
+    </style>
+
+    <style name="Gmarket_58_FFFFFF_Light" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_light</item>
+        <item name="android:textSize">@dimen/px_58</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="Gmarket_60_FFFFFF_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_60</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="Gmarket_144_Bold_000000" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_144</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="Gmarket_144_Bold_FFFFFF" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/gmarket_sans_bold</item>
+        <item name="android:textSize">@dimen/px_144</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <!-- Gmarket font END -->
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <style name="AppTheme.NoActionBar.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
 </resources>

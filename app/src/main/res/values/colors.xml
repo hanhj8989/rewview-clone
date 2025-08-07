@@ -3,6 +3,104 @@
     <color name="colorPrimary">@color/backgroundColor</color>
     <color name="colorPrimaryDark">@color/backgroundColor</color>
 
+    <color name="basicColor">#FFB729</color>
+    <color name="basicColor_10">#1AFFB729</color>       <!-- 투명도 10% -->
+    <color name="basicFontColor">#FFB729</color>
     <color name="backgroundColor">#FFFFFF</color>
 
+    <!-- 기본 색상들 -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="color_B3FFFFFF">#B3FFFFFF</color>
+    <color name="color_26A8A6A6">#26A8A6A6</color>      <!-- 투명도 15% -->
+    <color name="color_30_26A8A6A6">#4DA8A6A6</color>   <!-- 투명도 30% -->
+
+    <color name="color_1A000000">#1A000000</color>
+    <color name="color_80000000">#80000000</color>      <!-- 투명도 50% -->
+    <color name="color_8C000000">#8C000000</color>      <!-- 투명도 55% -->
+    <color name="color_B3000000">#B3000000</color>      <!-- 투명도 70% -->
+    <color name="color_BF000000">#BF000000</color>      <!-- 투명도 75% -->
+    <color name="color_4D000000">#4D000000</color>
+
+    <color name="color_FFAE00">#FFAE00</color>
+    <color name="color_naver">#2db400</color>
+    <color name="color_000000">#000000</color>
+    <color name="color_D3D2D2">#D3D2D2</color>
+    <color name="color_B9B9B9">#B9B9B9</color>
+    <color name="color_FBFBFB">#FBFBFB</color>
+    <color name="color_D3D3D3">#D3D3D3</color>
+    <color name="color_C6C6C6">#C6C6C6</color>
+    <color name="color_E0DFDF">#E0DFDF</color>
+    <color name="color_C9C7C7">#C9C7C7</color>
+    <color name="color_CCCCCC">#CCCCCC</color>
+    <color name="color_CDCDCD">#CDCDCD</color>
+    <color name="color_D0D0D0">#D0D0D0</color>
+    <color name="color_DDDDDD">#DDDDDD</color>
+    <color name="color_E6E6E6">#E6E6E6</color>
+    <color name="color_EEEEEE">#EEEEEE</color>
+    <color name="color_626262">#626262</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_A2A2A2">#A2A2A2</color>
+    <color name="color_A9A9A9">#A9A9A9</color>
+    <color name="color_B5B5B5">#B5B5B5</color>
+    <color name="color_E5E5E5">#E5E5E5</color>
+    <color name="color_E5E4E4">#E5E4E4</color>
+    <color name="color_BFBFBF">#BFBFBF</color>
+    <color name="color_8B8B8B">#8B8B8B</color>
+    <color name="color_F7C546">#F7C546</color>
+    <color name="color_FFA900">#FFA900</color>
+    <color name="color_DCDCDC">#DCDCDC</color>
+    <color name="color_FCC256">#FCC256</color>
+    <color name="color_F1F1F1">#F1F1F1</color>
+    <color name="color_D9D9D9">#D9D9D9</color>
+    <color name="color_F2F2F2">#F2F2F2</color>
+    <color name="color_F5F5F5">#F5F5F5</color>
+    <color name="color_F9F9F9">#F9F9F9</color>
+    <color name="color_C1BFC0">#C1BFC0</color>
+    <color name="color_C4C4C4">#C4C4C4</color>
+    <color name="color_CBCBCB">#CBCBCB</color>
+    <color name="color_3B5999">#3B5999</color>
+    <color name="color_EFEFEF">#EFEFEF</color>
+    <color name="color_FBEBCD">#FBEBCD</color>
+    <color name="color_E1E1E1">#E1E1E1</color>
+    <color name="color_E1730F">#E1730F</color>
+    <color name="color_E2740F">#E2740F</color>
+    <color name="color_A8A6A6">#A8A6A6</color>
+    <color name="color_1A8A6A6">#1AA8A6A6</color>          <!--#A8A6A6 투명도 10%-->
+    <color name="color_4DA8A6A6">#4DA8A6A6</color>         <!--#A8A6A6 투명도 30%-->
+    <color name="color_80A8A6A6">#80A8A6A6</color>         <!--#A8A6A6 투명도 50%-->
+    <color name="color_B3A8A6A6">#B3A8A6A6</color>         <!--#A8A6A6 투명도 70%-->
+    <color name="color_8C343434">#8C343434</color>         <!--#A8A6A6 투명도 55%-->
+    <color name="color_707070">#707070</color>
+    <color name="color_48_EDEDED">#80EDEDED</color>  <!--투명도 48-->
+    <color name="color_EDEDED">#EDEDED</color>
+    <color name="color_747474">#747474</color>
+    <color name="color_E8E8E8">#E8E8E8</color>
+    <color name="color_F6F6F6">#F6F6F6</color>
+    <color name="color_DEDEDE">#DEDEDE</color>
+    <color name="color_DCDBDB">#DCDBDB</color>
+    <color name="color_B2B2B2">#B2B2B2</color>
+    <color name="color_D2D2D2">#D2D2D2</color>
+    <color name="color_D2D1D1">#D2D1D1</color>
+    <color name="color_FFFFFF">#FFFFFF</color>
+    <color name="color_AEAEAE">#AEAEAE</color>
+    <color name="color_ED8000">#ED8000</color>
+    <color name="color_00aa71">#00AA71</color>
+    <color name="color_DE022E">#DE022E</color>
+    <color name="color_FEF7E9">#FEF7E9</color>
+    <color name="color_B7B7B7">#B7B7B7</color>
+    <color name="color_838282">#838282</color>
+    <color name="color_1877F2">#1877F2</color>
+    <color name="color_FFF4D4">#FFF4D4</color>
+    <color name="color_CCDADADA">#CCDADADA</color>
+    <color name="color_818181">#818181</color>
+    <color name="color_909090">#909090</color>
+    <color name="color_FFF4D5">#FFF4D5</color>
+    <color name="color_F0A819">#F0A819</color>
+
+
+    <drawable name="color_sns">@color/color_C9C7C7</drawable>
+    <drawable name="color_facebook">@color/color_3B5999</drawable>
 </resources>
+
