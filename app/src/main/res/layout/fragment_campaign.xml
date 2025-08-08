@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="8dp"
-        android:text="여기에 캠페인 목록이 표시됩니다"
+        android:text="빈화면에 텍스트만 표시하겠습니다...!"
         android:textSize="14sp"
         android:textColor="@color/color_A8A6A6" />
 

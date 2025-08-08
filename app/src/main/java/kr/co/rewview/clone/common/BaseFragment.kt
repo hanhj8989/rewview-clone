@@ -10,16 +10,12 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDialog
 import androidx.fragment.app.Fragment
-// Gson - 나중에 필요시 활성화
 // import com.google.gson.JsonObject
-// Ted Permission - 나중에 필요시 활성화
 // import com.gun0912.tedpermission.PermissionListener
 // import com.gun0912.tedpermission.normal.TedPermission
-    // RxJava - 나중에 필요시 활성화
-    import io.reactivex.Single
-    import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.Single
+import io.reactivex.disposables.CompositeDisposable
 import kr.co.rewview.clone.R
-// 나중에 구현 예정
 // import kr.co.rewview.clone.common.IntentChange
 // import kr.co.rewview.clone.widget.LoadingDialog
 import okhttp3.RequestBody
@@ -37,11 +33,10 @@ open class BaseFragment : Fragment() {
     lateinit var mProgressDialog: Dialog
     private var mForceUpdateDialog: Dialog? = null
 
-    // RxJava 관련 코드 - 나중에 필요시 활성화
     private val compositeDisposable = CompositeDisposable()
 
     val permissionDeniedMsg: String = "권한을 거절 한다면 해당 서비스를 이용에 제한이 있습니다.\n\n해당 권한을 선택 하시기 바랍니다. [설정] > [권한]"
-    // Ted Permission 관련 코드 - 나중에 필요시 활성화
+    // 나중에 구현 예정!
     // val listener = object : PermissionListener {
     //     override fun onPermissionGranted() {
     //         onPermissionEnable(permissionType)
@@ -66,7 +61,6 @@ open class BaseFragment : Fragment() {
     fun alertCallback(flag: Boolean, type: String) {}
 
     fun goToLogin() {
-        // Gson 관련 코드 - 나중에 필요시 활성화
         // val data = JsonObject()
         // data.addProperty("notification_count", 0)
 
@@ -104,16 +98,12 @@ open class BaseFragment : Fragment() {
             }.show()
     }
 
-    // Gson 관련 코드 - 나중에 필요시 활성화
     // open fun onCallback(transactionId: String, result: JsonObject) {
     //     println("callback fragment : " + transactionId + " , " + result.toString())
     // }
 
-    protected fun checkImagePermissions(): Boolean {
-        TODO()
-    }
 
-    // Ted Permission 관련 코드 - 나중에 필요시 활성화
+
     // fun permissionCheck(permissionType: String, vararg p: String) {
     //     this.permissionType = permissionType
 
@@ -153,7 +143,6 @@ open class BaseFragment : Fragment() {
      *
      * 2023/08/19 seongtaek
      */
-    // RxJava 관련 코드 - 나중에 필요시 활성화
     protected fun loadUserReportHistory(): Single<MutableList<String>> = Single.defer {
         val userReportList = mutableListOf<String>()
 

@@ -35,7 +35,6 @@ import androidx.cardview.widget.CardView
 
     import com.igaworks.v2.core.AdBrixRm
 
-    // RxJava - 나중에 필요시 활성화
     //import io.reactivex.Single
 
 import kr.co.rewview.clone.R
@@ -46,7 +45,6 @@ import kr.co.rewview.clone.R
 // import kr.co.rewview.clone.legacy.activity.ReviewActivity
 // import kr.co.rewview.clone.legacy.activity.ReviewMainActivityV2
 // import kr.co.rewview.clone.legacy.activity.TalkActivity
-// 나중에 구현 예정
 // import kr.co.rewview.clone.common.IntentChange
 // import kr.co.rewview.clone.databinding.DialogDefaultBinding
 // import kr.co.rewview.clone.databinding.DialogDefaultOkV2Binding
