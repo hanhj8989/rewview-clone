@@ -14,6 +14,13 @@ supportLibVersion= "1.4.1"
 constraintlayout= "2.1.4"
 material= "1.12.0"
 navigation = "2.7.7"
+igaworks = "2.3.1.6"
+rxjava = "2.2.10"
+rxandroid = "2.1.1"
+okhttp = "3.14.9"
+retrofit = "2.9.0"
+logger = "2.2.0"
+jsoup = "1.11.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -37,6 +44,15 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 google-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation" }
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation" }
+
+igaworks-android-sdk = { group = "io.dfinery", name = "android-sdk", version.ref = "igaworks" }
+rxjava = { group = "io.reactivex.rxjava2", name = "rxjava", version.ref = "rxjava" }
+rxandroid = { group = "io.reactivex.rxjava2", name = "rxandroid", version.ref = "rxandroid" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+logger = { group = "com.orhanobut", name = "logger", version.ref = "logger" }
+jsoup = { group = "org.jsoup", name = "jsoup", version.ref = "jsoup" }
 
 
 

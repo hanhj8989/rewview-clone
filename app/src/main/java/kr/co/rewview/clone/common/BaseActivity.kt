@@ -27,25 +27,18 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
-// Data Binding - 나중에 필요시 활성화
+
 // import androidx.databinding.BindingAdapter
 // import androidx.databinding.DataBindingUtil
 
-// Gson - 나중에 필요시 활성화
 // import com.google.gson.JsonObject
 
-// Ted Permission - 나중에 필요시 활성화
-// import com.gun0912.tedpermission.PermissionListener
-// import com.gun0912.tedpermission.normal.TedPermission
-
-    // AdBrix - 나중에 필요시 활성화
     import com.igaworks.v2.core.AdBrixRm
 
     // RxJava - 나중에 필요시 활성화
-    import io.reactivex.Single
+    //import io.reactivex.Single
 
 import kr.co.rewview.clone.R
-// Legacy activities - 나중에 구현 예정
 // import kr.co.rewview.clone.legacy.activity.CampaignActivity
 // import kr.co.rewview.clone.legacy.activity.HomeMainActivity
 // import kr.co.rewview.clone.legacy.activity.MagazineActivity
@@ -63,7 +56,7 @@ import kr.co.rewview.clone.R
 // import kr.co.rewview.clone.info.UserNotificationInfo
 // import kr.co.rewview.clone.util.DebouncingOnClickListener
 // import kr.co.rewview.clone.widget.LoadingDialog
-import okhttp3.RequestBody
+//import okhttp3.RequestBody
 
 /**
  * Created by Administrator on 2018-05-10.
