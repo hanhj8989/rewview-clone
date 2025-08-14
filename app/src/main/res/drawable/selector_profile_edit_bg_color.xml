@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/shape_ffa900_to_f7c546_fill"
-          android:state_checked="true" />
-    <item android:drawable="@drawable/shape_ffffff_fill"
-          android:state_checked="false" />
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="45"
+                android:endColor="#F7C546"
+                android:startColor="#FFA900" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
 </selector>

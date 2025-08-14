@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/shape_basic_fill_round_27"
-          android:state_checked="true" />
-    <item android:drawable="@drawable/shape_basic_round_27"
-          android:state_checked="false" />
-    <item android:drawable="@drawable/shape_basic_round_27" />
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="27dp" />
+            <solid android:color="#2DB400" />
+        </shape>
+    </item>
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="27dp" />
+            <solid android:color="#2DB400" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="27dp" />
+            <solid android:color="#2DB400" />
+        </shape>
+    </item>
 </selector>
