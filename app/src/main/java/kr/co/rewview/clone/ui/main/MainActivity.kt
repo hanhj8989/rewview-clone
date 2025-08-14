@@ -1,4 +1,4 @@
-package kr.co.rewview.clone
+package kr.co.rewview.clone.ui.main
 
 import android.os.Bundle
 import android.view.View
@@ -9,7 +9,13 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.orhanobut.logger.Logger
+import kr.co.rewview.clone.R
+import kr.co.rewview.clone.common.IntentChange
 import kr.co.rewview.clone.databinding.ActivityMainBinding
+
+import kr.co.rewview.clone.util.DebouncingOnClickListener
+
 
 class MainActivity : AppCompatActivity() {
     
@@ -30,6 +36,13 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayShowTitleEnabled(false)
         
         setupNavigation()
+
+        binding.notificationIcon.setOnClickListener(object : DebouncingOnClickListener() {
+            override fun doClick(v: View) {
+                Logger.i("===== 알림 메뉴 선택 =====")
+                IntentChange.intentNotice(this@MainActivity)
+            }
+        })
     }
     
     private fun setupNavigation() {
@@ -81,7 +94,11 @@ class MainActivity : AppCompatActivity() {
 
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_campaign, R.id.navigation_review, R.id.navigation_magazine, R.id.navigation_rewview_store, R.id.navigation_mypage
+                R.id.navigation_campaign,
+                R.id.navigation_review,
+                R.id.navigation_magazine,
+                R.id.navigation_rewview_store,
+                R.id.navigation_mypage
             )
         )
 
