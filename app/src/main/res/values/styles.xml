@@ -2633,6 +2633,13 @@
         <item name="android:textColor">#FFFFFF</item>
     </style>
 
+    <style name="NotoSans_28_000000_Bold" parent="DefaultTextView">
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
+        <item name="android:textSize">@dimen/px_28</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <!-- Gmarket font END -->
     <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 

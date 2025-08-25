@@ -1,29 +1,15 @@
 package kr.co.rewview.clone.ui.main
 
-import android.content.Context
-import android.content.Intent
-import android.net.Uri
+//import kr.co.rewview.clone.common.HttpClient
 import android.os.Bundle
 import android.view.MenuItem
-import android.view.View
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentStatePagerAdapter
-import androidx.viewpager.widget.PagerAdapter
-import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
-import com.google.gson.JsonArray
-import com.google.gson.JsonObject
-import com.orhanobut.logger.Logger
-import kr.co.rewview.clone.common.BaseActivity
-import kr.co.rewview.clone.common.CommonLib
-import kr.co.rewview.clone.common.DefineValues
-//import kr.co.rewview.clone.common.HttpClient
 import kr.co.rewview.clone.R
+import kr.co.rewview.clone.common.BaseActivity
 import kr.co.rewview.clone.databinding.ActivityNoticeBinding
 import kr.co.rewview.clone.ui.adapter.NoticePagerAdapter
+
 //import kr.co.rewview.clone.info.MagazineInfo
 //import kr.co.rewview.clone.info.NotificationInfo
 
@@ -76,12 +62,18 @@ class NoticeActivity : BaseActivity() {
     private fun updateTabSelection(position: Int) {
         when (position) {
             NoticePagerAdapter.POSITION_NOTICE -> {
-                mBinding.tvNotice.setTextColor(getColor(R.color.basicColor))
-                mBinding.tvActivityLog.setTextColor(getColor(R.color.color_707070))
+                // 공지사항 활성화
+                mBinding.tvNotice.setTextAppearance(R.style.Text_28_000000_Bold)
+                mBinding.tvActivityLog.setTextAppearance(R.style.Text_28_A8A6A6)
+                mBinding.vwNotice.setBackgroundColor(getColor(R.color.basicColor))
+                mBinding.vwActivityLog.setBackgroundColor(getColor(R.color.color_E5E5E5))
             }
             NoticePagerAdapter.POSITION_ACTIVITY -> {
-                mBinding.tvActivityLog.setTextColor(getColor(R.color.basicColor))
-                mBinding.tvNotice.setTextColor(getColor(R.color.color_707070))
+                // 활동내역 활성화
+                mBinding.tvActivityLog.setTextAppearance(R.style.Text_28_000000_Bold)
+                mBinding.tvNotice.setTextAppearance(R.style.Text_28_A8A6A6)
+                mBinding.vwActivityLog.setBackgroundColor(getColor(R.color.basicColor))
+                mBinding.vwNotice.setBackgroundColor(getColor(R.color.color_E5E5E5))
             }
         }
     }
