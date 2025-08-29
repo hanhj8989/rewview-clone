@@ -1,15 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/backgroundColor">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/magazine_kr"
-        android:textSize="24sp"
-        android:textColor="@color/basicColor" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:orientation="horizontal">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/Text_28_000000_Bold"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="13dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="전체"
+                />
+            <View
+                android:id="@+id/vw_magazine_all"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_3"
+                android:layout_marginStart="@dimen/px_8"
+                android:background="@color/color_A8A6A6"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/Text_30_A8A6A6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="13dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/vogue"
+                />
+            <View
+                android:id="@+id/vw_magazine_vogue"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_3"
+                android:layout_marginStart="@dimen/px_8"
+                android:background="@color/color_A8A6A6"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/Text_30_A8A6A6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="13dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/allure"
+                />
+            <View
+                android:id="@+id/vw_magazine_allure"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_3"
+                android:layout_marginStart="@dimen/px_8"
+                android:background="@color/color_A8A6A6"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/Text_30_A8A6A6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="13dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/w"
+                />
+            <View
+                android:id="@+id/vw_magazine_w"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_3"
+                android:layout_marginStart="@dimen/px_8"
+                android:background="@color/color_A8A6A6"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/Text_30_A8A6A6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="13dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/gq"
+                />
+            <View
+                android:id="@+id/vw_magazine_gq"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_3"
+                android:layout_marginStart="@dimen/px_8"
+                android:background="@color/color_A8A6A6"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
