@@ -8,14 +8,12 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.viewpager2.widget.ViewPager2
 import kr.co.rewview.clone.R
 import kr.co.rewview.clone.databinding.FragmentMagazineBinding
-import kr.co.rewview.clone.ui.adapter.MagazineAdapter
 
 class MagazineFragment : Fragment() {
     private lateinit var mBinding: FragmentMagazineBinding
-    private lateinit var magazineAdapter: MagazineAdapter
     private lateinit var tabLayouts: List<LinearLayout>
 
     override fun onCreateView(
@@ -24,19 +22,24 @@ class MagazineFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         mBinding = FragmentMagazineBinding.inflate(inflater, container, false)
-        
-        magazineAdapter = MagazineAdapter()
-
-        setupRecyclerView()
+        setupPager()
         
         return mBinding.root
     }
 
-    private fun setupRecyclerView() {
-        mBinding.rvMagazineList.adapter = magazineAdapter
-        mBinding.rvMagazineList.layoutManager = LinearLayoutManager(context)
-        
+    private fun setupPager() {
+        val pagerAdapter = kr.co.rewview.clone.ui.adapter.MagazinePagerAdapter(this)
+        mBinding.viewPager.adapter = pagerAdapter
+
         setupTabClickListeners()
+
+        mBinding.viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                updateTabSelection(position)
+            }
+        })
+
         updateTabSelection(TAB_ALL)
     }
     
@@ -53,12 +56,9 @@ class MagazineFragment : Fragment() {
             mBinding.root.findViewById<View>(id).parent as LinearLayout
         }
 
-        val filters: List<String?> = listOf(null, "142", "144", "143", "145")
-
         tabLayouts.forEachIndexed { index, layout ->
             layout.setOnClickListener {
-                magazineAdapter.filterByExtra1(filters[index])
-                updateTabSelection(index)
+                mBinding.viewPager.setCurrentItem(index, true) //탭클릭시 전환
             }
         }
     }
