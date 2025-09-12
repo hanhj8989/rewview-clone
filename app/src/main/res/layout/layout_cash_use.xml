@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/Text_32_000000_Bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="내 르뷰캐시" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/Gmarket_44_000000_Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100,000" />
+
+            <TextView
+                android:id="@+id/textView2_1"
+                style="@style/Text_24_000000_Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="캐시" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/color_F2F2F2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/Text_32_Basic_Bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="출금 가능한 금액" />
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/Gmarket_44_Basic_Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100,000" />
+
+            <TextView
+                android:id="@+id/textView4_1"
+                style="@style/Text_24_Basic_Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="캐시" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/color_F2F2F2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/information_gray_13dp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                style="@style/Text_23_B8B8B8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="8dp"
+                android:text="누적 1만캐시 이상부터 출금할 수 있어요." />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="25dp"
+            android:background="@color/color_F2F2F2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView1" />
+
+        <TextView
+            android:id="@+id/textView6"
+            style="@style/Text_32_000000_Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="현금으로 출금하기" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/shape_f2f2f2_fill_round_40"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/information_black" />
+
+            <TextView
+                android:id="@+id/textView7"
+                style="@style/Text_26_000000_Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="먼저 출금계좌를 등록해주세요. >" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/shape_80ededed_fill"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/textView8_1"
+                style="@style/Text_23_999999"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="• 본인 명의 개인 계좌로만 출금할 수 있어요." />
+
+            <TextView
+                android:id="@+id/textView8_2"
+                style="@style/Text_23_999999"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="• 매월 3일~17일 신청 : 25일 지급" />
+
+            <TextView
+                android:id="@+id/textView8_3"
+                style="@style/Text_23_999999"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="매월 18일~익월 2일 신청 : 10일 지급" />
+
+            <TextView
+                android:id="@+id/textView8_4"
+                style="@style/Text_23_999999"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="위 일정에서 미지급된 건은 신청일로부터 익월 말 지급" />
+
+            <TextView
+                android:id="@+id/textView8_5"
+                style="@style/Text_23_999999"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="지급일이 공휴일인 경우 가까운 영업일에 지급" />
+
+         </LinearLayout>
+
+     </LinearLayout>
+
+     <TextView
+         android:id="@+id/textView10"
+         android:layout_width="0dp"
+         android:layout_height="60dp"
+         android:layout_marginLeft="20dp"
+         android:layout_marginRight="20dp"
+         android:layout_marginBottom="26dp"
+         android:text="르뷰캐시 전액 출금하기"
+         android:background="@drawable/shape_d9d9d9_fill_round_30"
+         android:gravity="center"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

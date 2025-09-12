@@ -28,6 +28,11 @@
             android:name=".ui.main.NoticeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
+            
+        <activity
+            android:name=".ui.activity.CashUseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ReviewClone" />
     </application>
 
 </manifest>
